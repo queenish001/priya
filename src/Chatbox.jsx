@@ -46,7 +46,7 @@ export default function Chatbox() {
   const { state } = useContext(Store)
   const { cart } = state
 
-  console.log("cart.userMessages", cart.userMessages)
+ // console.log("cart.userMessages", cart.userMessages)
   return (
 
     <Paper className={classes.paper}>
@@ -68,7 +68,8 @@ export default function Chatbox() {
             {message.direction === "left" ?
               (<>
                 <MessageLeft
-                  message={message.message}
+                  message={message.res}
+                 
                   timestamp="MM/DD 00:00"
                   photoURL="igdtuw.jpg"
                   displayName="IGDTUW"
@@ -77,6 +78,7 @@ export default function Chatbox() {
               </>) : (<>
                 <MessageRight
                   message={message.message}
+               
                   timestamp="MM/DD 00:00"
                   photoURL="https://lh3.googleusercontent.com/a-/AOh14Gi4vkKYlfrbJ0QLJTg_DLjcYyyK7fYoWRpz2r4s=s96-c"
                   avatarDisp={false}

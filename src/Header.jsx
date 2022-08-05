@@ -8,20 +8,6 @@ import Avatar from '@mui/material/Avatar';
 export default function Header() {
   return (
     <>
-    
-   
-      {/* <CardHeader
-        avatar={
-          <Avatar src="igdtuw.jpg" aria-label="avatar"/>
-        }
-        action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
-        }
-        title="IGDTUW"
-        subheader="ChatBot using Rasa"
-      /> */}
 
 
 <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
@@ -31,7 +17,7 @@ export default function Header() {
         <ListItemAvatar>
         <Avatar src="igdtuw.jpg" aria-label="avatar"/>
         </ListItemAvatar>
-        <ListItemText primary="IGDTUW" secondary="ChatBot using Rasa" />
+        <ListItemText primary="IGDTUW" secondary="IGDTUW Chatbot" />
       </ListItem>
     </List>
     </>
