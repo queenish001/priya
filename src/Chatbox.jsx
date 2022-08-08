@@ -75,7 +75,8 @@ export default function Chatbox() {
                   displayName="IGDTUW"
                   avatarDisp={true}
                 />
-                <img width={200} height={200} src={message.image} />
+                {message.image?(<img width={200} height={200} src={message.image} />):(null)}
+                
               </>) : (<>
                 <MessageRight
                   message={message.message}
