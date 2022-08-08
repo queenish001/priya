@@ -41,7 +41,7 @@ export const TextInput = () => {
 
  async function submitHandler({ message }) {
     resetField('message');
-    const { data } = await axios.post(`https://0b81-106-202-65-167.in.ngrok.io/webhooks/rest/webhook`, {
+    const { data } = await axios.post(`https://b2af-2405-204-1489-695c-714a-c007-d25b-4ef9.in.ngrok.io/webhooks/rest/webhook`, {
       sender: "test_user",
       message: message
     });
@@ -50,7 +50,7 @@ export const TextInput = () => {
     let res =data[0].text;
     //console.log("res",res);
     dispatch({ type: 'USER_MESSAGE_SEND', payload: { message, direction: "right" } });
-    dispatch({ type: 'USER_MESSAGE_SEND', payload: { res, direction: "left" } });
+    dispatch({ type: 'USER_MESSAGE_SEND', payload: { res, direction: "left" , image:data[0].image} });
   };
 
   speechResponseSpeak("");
@@ -79,16 +79,18 @@ export const TextInput = () => {
   }
 
   async function speechSubmitHandler(message) {
-    const { data } = await axios.post(`https://0b81-106-202-65-167.in.ngrok.io/webhooks/rest/webhook`, {
+    const { data } = await axios.post(`https://b2af-2405-204-1489-695c-714a-c007-d25b-4ef9.in.ngrok.io/webhooks/rest/webhook`, {
       sender: "test_user",
       message: message
     });
 
     console.log("data response", data);
     let res =data[0].text;
+    if (res === "")
+    res = "ERROR"
     //console.log("res",res);
     dispatch({ type: 'USER_MESSAGE_SEND', payload: { message, direction: "right" } });
-    dispatch({ type: 'USER_MESSAGE_SEND', payload: { res, direction: "left" } });
+    dispatch({ type: 'USER_MESSAGE_SEND', payload: { res, direction: "left", image:data[0].image } });
 
     speechResponseSpeak(res);  };
 
