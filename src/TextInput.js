@@ -118,6 +118,7 @@ export const TextInput = () => {
   };
   speechRecognition.onend = () => {
     //change mic icon back
+    speechRecognition.stop();
   };
   let final_transcript = "";
 
