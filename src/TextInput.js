@@ -79,7 +79,7 @@ export const TextInput = () => {
     msg.localService = true;
       msg.text = message_stripped;
       msg.lang = "en-IN";
-    msg.rate = .9;
+    msg.rate = 1.3;
     msg.volume = 100;
       window.speechSynthesis.speak(msg);
   
@@ -134,10 +134,18 @@ export const TextInput = () => {
     };
   }
 
-
+let flag = false;
   function mic() {
+    if (flag===false) {
   speechRecognition.start();
     setMicIcon(<MicOffIcon />)
+    flag = true;
+    }
+    else{
+      speechRecognition.stop();
+      setMicIcon(<MicIcon />)
+      flag = false;
+    }
     
   }
 
