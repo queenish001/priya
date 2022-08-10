@@ -17,7 +17,7 @@ export default function Header() {
         <ListItemAvatar>
         <Avatar src="igdtuw.jpg" aria-label="avatar"/>
         </ListItemAvatar>
-        <ListItemText primary="IGDTUW" secondary="IGDTUW Chatbot" />
+        <ListItemText primary="IGDTUW Assistant" secondary="Indira Gandhi Delhi Technical University for Women" />
       </ListItem>
     </List>
     </>

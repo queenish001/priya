@@ -46,17 +46,17 @@ export default function Chatbox() {
   const { state } = useContext(Store)
   const { cart } = state
 
- // console.log("cart.userMessages", cart.userMessages)
+ console.log("cart.userMessages", cart.userMessages)
   return (
 
     <Paper className={classes.paper}>
       <Header />
       <Paper id="style-1" className={classes.messagesBody}>
         <MessageLeft
-          message="Hello"
+          message="Hello! How may I help you?"
           timestamp="MM/DD 00:00"
           photoURL="igdtuw.jpg"
-          displayName="IGDTUW"
+          displayName="Assistant"
           avatarDisp={true}
         />
 

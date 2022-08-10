@@ -41,23 +41,30 @@ export const TextInput = () => {
 
  async function submitHandler({ message }) {
     resetField('message');
-    const { data } = await axios.post(`https://8125-106-202-20-166.in.ngrok.io/webhooks/rest/webhook`, {
+    const { data } = await axios.post(`http://0.0.https://9bbb-223-225-106-142.in.ngrok.io/webhooks/rest/webhook`, {
       sender: "test_user",
       message: message
     });
 
     console.log("data response", data);
     let res =data[0].text;
-    //console.log("res",res);
     dispatch({ type: 'USER_MESSAGE_SEND', payload: { message, direction: "right" } });
-    dispatch({ type: 'USER_MESSAGE_SEND', payload: { res, direction: "left" , image:data[0].image} });
+    
+    if(data[1] === undefined){
+        console.log("res",{res, direction: "left"});
+        dispatch({ type: 'USER_MESSAGE_SEND', payload: { res, direction: "left"} });
+    }
+    else{
+      dispatch({ type: 'USER_MESSAGE_SEND', payload: { res, direction: "left" , image:data[1].image?data[1].image:null} });
+    }
+
   };
 
   speechResponseSpeak("");
 
   function speechResponseSpeak(message)
   {
-     let message_stripped = message.replace(/<\/?[^>]+(>|$)/g, "");
+     let message_stripped = message.replace("?", "");
   
     var msg = new SpeechSynthesisUtterance();
   
@@ -79,7 +86,7 @@ export const TextInput = () => {
   }
 
   async function speechSubmitHandler(message) {
-    const { data } = await axios.post(`https://8125-106-202-20-166.in.ngrok.io/webhooks/rest/webhook`, {
+    const { data } = await axios.post(`https://9bbb-223-225-106-142.in.ngrok.io/webhooks/rest/webhook`, {
       sender: "test_user",
       message: message
     });
@@ -88,11 +95,17 @@ export const TextInput = () => {
     let res =data[0].text;
     if (res === "")
     res = "ERROR"
-    //console.log("res",res);
     dispatch({ type: 'USER_MESSAGE_SEND', payload: { message, direction: "right" } });
-    dispatch({ type: 'USER_MESSAGE_SEND', payload: { res, direction: "left", image:data[0].image } });
-
-    speechResponseSpeak(res);  };
+    
+    if(data[1] === undefined){
+        console.log("res",{res, direction: "left"});
+        dispatch({ type: 'USER_MESSAGE_SEND', payload: { res, direction: "left"} });
+    }
+    else{
+      dispatch({ type: 'USER_MESSAGE_SEND', payload: { res, direction: "left" , image:data[1].image?data[1].image:null} });
+    }
+    speechResponseSpeak(res); 
+   };
 
   //speech recog
   // Function run on mic button onClick
