@@ -140,11 +140,13 @@ let flag = false;
   speechRecognition.start();
     setMicIcon(<MicOffIcon />)
     flag = true;
+    console.log(flag)
     }
     else{
       speechRecognition.stop();
       setMicIcon(<MicIcon />)
       flag = false;
+      console.log(flag)
     }
     
   }
