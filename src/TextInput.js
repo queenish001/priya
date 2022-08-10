@@ -41,7 +41,7 @@ export const TextInput = () => {
 
  async function submitHandler({ message }) {
     resetField('message');
-    const { data } = await axios.post(`http://0.0.https://9bbb-223-225-106-142.in.ngrok.io/webhooks/rest/webhook`, {
+    const { data } = await axios.post(`https://fdf8-223-225-43-94.in.ngrok.io/webhooks/rest/webhook`, {
       sender: "test_user",
       message: message
     });
@@ -86,7 +86,7 @@ export const TextInput = () => {
   }
 
   async function speechSubmitHandler(message) {
-    const { data } = await axios.post(`https://9bbb-223-225-106-142.in.ngrok.io/webhooks/rest/webhook`, {
+    const { data } = await axios.post(`https://fdf8-223-225-43-94.in.ngrok.io/webhooks/rest/webhook`, {
       sender: "test_user",
       message: message
     });
