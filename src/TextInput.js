@@ -8,6 +8,15 @@ import MicOffIcon from '@mui/icons-material/MicOff';
 import { Controller, useForm } from 'react-hook-form';
 import axios from 'axios';
 import { Store } from './Store';
+
+import { SpeechProvider } from "@speechly/react-client";
+
+import { PushToTalkButton, PushToTalkButtonContainer,
+  BigTranscript,
+  BigTranscriptContainer,
+  IntroPopup } from "@speechly/react-ui";
+
+
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     wrapForm: {

@@ -13,7 +13,7 @@ export default function Header() {
 <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
 
 
-      <ListItem>
+      <ListItem sx={{bgcolor: '#AFE1AF'}}>
         <ListItemAvatar>
         <Avatar src="igdtuw.jpg" aria-label="avatar"/>
         </ListItemAvatar>

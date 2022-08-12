@@ -12,6 +12,8 @@
     "@material-ui/styles": "^4.11.5",
     "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.9.3",
+    "@speechly/react-client": "^2.1.2",
+    "@speechly/react-ui": "^2.7.0",
     "axios": "^0.27.2",
     "jquery": "^3.6.0",
     "js-cookie": "^3.0.1",

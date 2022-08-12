@@ -8,18 +8,20 @@ import { Store } from './Store';
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     paper: {
-      width: "80vw",
-      height: "80vh",
-      maxWidth: "500px",
-      maxHeight: "700px",
+      width: "100vw",
+      height: "50vh",
+      backgroundColor: "#AFE1AF",
+      // maxWidth: "1100px",
+      // maxHeight: "300px",
       display: "flex",
       alignItems: "center",
       flexDirection: "column",
-      position: "relative"
+      position: "absolute",
+      bottom: "10px"
     },
     paper2: {
       width: "80vw",
-      maxWidth: "500px",
+      maxWidth: "50vh",
       display: "flex",
       alignItems: "center",
       flexDirection: "column",
@@ -35,7 +37,7 @@ const useStyles = makeStyles((theme: Theme) =>
     messagesBody: {
       width: "calc( 100% - 20px )",
       margin: 10,
-      overflowY: "scroll",
+      overflowY: "auto",
       height: "calc( 100% - 80px )"
     }
   })
@@ -57,6 +59,46 @@ export default function Chatbox() {
           timestamp="MM/DD 00:00"
           photoURL="igdtuw.jpg"
           displayName="Assistant"
+          avatarDisp={true}
+        />
+
+        <MessageRight
+          message="Hello! How may I help you?"
+          timestamp="MM/DD 00:00"
+          photoURL="igdtuw.jpg"
+          displayName="Me"
+          avatarDisp={true}
+        />
+
+<MessageRight
+          message="Hello! How may I help you?"
+          timestamp="MM/DD 00:00"
+          photoURL="igdtuw.jpg"
+          displayName="Me"
+          avatarDisp={true}
+        />
+
+<MessageRight
+          message="Hello! How may I help you?"
+          timestamp="MM/DD 00:00"
+          photoURL="igdtuw.jpg"
+          displayName="Me"
+          avatarDisp={true}
+        />
+
+<MessageRight
+          message="Hello! How may I help you?"
+          timestamp="MM/DD 00:00"
+          photoURL="igdtuw.jpg"
+          displayName="Me"
+          avatarDisp={true}
+        />
+
+<MessageLeft
+          message="Hello! How may I help you?"
+          timestamp="MM/DD 00:00"
+          photoURL="igdtuw.jpg"
+          displayName="Me"
           avatarDisp={true}
         />
 
