@@ -8,8 +8,8 @@ import { Store } from './Store';
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     paper: {
-      width: "100vw",
-      height: "50vh",
+      width: "98vw",
+      height: "53%",
       backgroundColor: "#AFE1AF",
       // maxWidth: "1100px",
       // maxHeight: "300px",

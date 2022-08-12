@@ -8,13 +8,7 @@ import MicOffIcon from '@mui/icons-material/MicOff';
 import { Controller, useForm } from 'react-hook-form';
 import axios from 'axios';
 import { Store } from './Store';
-
-import { SpeechProvider } from "@speechly/react-client";
-
-import { PushToTalkButton, PushToTalkButtonContainer,
-  BigTranscript,
-  BigTranscriptContainer,
-  IntroPopup } from "@speechly/react-ui";
+import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition'
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -31,6 +25,9 @@ const useStyles = makeStyles((theme: Theme) =>
     button: {
       //margin: theme.spacing(1),
     },
+    SpeechProvider:{
+      float: 'right'
+    }
   })
 );
 
@@ -174,9 +171,11 @@ export const TextInput = () => {
             ></TextField>
           )}
         ></Controller>
-        <Button onClick={() => mic()} className={classes.button}>
+       <Button onClick={() => mic()} className={classes.button}>
           {micIcon}
         </Button>
+
+
         <Button type='submit'  className={classes.button}>
           <SendIcon />
         </Button>

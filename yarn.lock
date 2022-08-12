@@ -10893,6 +10893,11 @@
     "object-assign" "^4.1.1"
     "react-is" "^16.12.0 || ^17.0.0 || ^18.0.0"
 
+"react-speech-recognition@^3.9.1":
+  "integrity" "sha512-HzhHydSvLcpaCW7q9HZamNg4XQaKXEMGBT9rYP/rGhbwBRj6dgrCZsHcoV3Lr3WSDyFw0svXeoRzbG/cneFGnQ=="
+  "resolved" "https://registry.npmjs.org/react-speech-recognition/-/react-speech-recognition-3.9.1.tgz"
+  "version" "3.9.1"
+
 "react-spring@^9.4.4":
   "integrity" "sha512-OGWNgKi2TSjpqsK67NCUspaCgEvWcG7HcpO9KAaDLFzFGNxWdGdN3YTXhhWUqCsLAx9I6LxPzmRuUPsMNqTgrw=="
   "resolved" "https://registry.npmjs.org/react-spring/-/react-spring-9.5.2.tgz"
