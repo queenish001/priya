@@ -118,7 +118,6 @@ export const TextInput = () => {
   };
   speechRecognition.onend = () => {
     //change mic icon back
-    speechRecognition.stop();
   };
   let final_transcript = "";
 
@@ -134,20 +133,9 @@ export const TextInput = () => {
     };
   }
 
-let flag = false;
   function mic() {
-    if (flag===false) {
   speechRecognition.start();
     setMicIcon(<MicOffIcon />)
-    flag = true;
-    console.log(flag)
-    }
-    else{
-      speechRecognition.stop();
-      setMicIcon(<MicIcon />)
-      flag = false;
-      console.log(flag)
-    }
     
   }
 
